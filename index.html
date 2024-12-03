@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-	<script src="gemini.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="gemini.js"></script>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-	<h2>Vertex Multimodal Streaming API Demo</h2>
-	<p>Copy the output from `gcloud auth print-access-token` and enter below, then click `Connect`. Once you see `Connected!` you can start chat with the agent!</p>
-	<input id="token">
-	<button id="start" onclick="con()">Connect</button>
-	<br>
-	<video id="localVideo" autoplay playsinline muted style="width:40%;"></video>
-	<div id="connectStatus"></div>
-	<div id="peerResponse"></div>
+    <div class= container>
+        <h2>Vertex Multimodal Streaming API Demo</h2>
+        <p>Copy the output from `gcloud auth print-access-token` and enter below, then click `Connect`. Once you see `Connected!` you can start chat with the agent!</p>
+        <input id="token">
+        <button id="start" onclick="con()">Connect</button>
+        <br>
+        <video id="localVideo" autoplay playsinline muted style="width:100%;"></video>
+        <div id="connectStatus"></div>
+        <div id="peerResponse"></div>
+    </div>
 </body>
 
 </html>
