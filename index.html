@@ -10,11 +10,29 @@
             padding: 20px;
             width: 100%;
         }
+        h1 {
+            color: #e1141e;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.875rem;
+        }
     </style>
 </head>
 <body>
+    <div>
+        <img alt="Britannia" src="https://www.britannia.co.in/images/logo.svg" decoding="async" data-nimg="intrinsic" srcset="https://www.britannia.co.in/images/logo.svg 1x, https://www.britannia.co.in/images/logo.svg 2x" style="margin: 20px auto; display: block; height: 50px;">
+    </div>
     <div class= container>
-        <h2>Vertex Multimodal Streaming API Demo</h2>
+        <div class="banner">
+            <div>
+                <video src="https://media.britannia.co.in/Copy_of_Milk_Bikis3_1_e16eeaa616.mp4" autoplay="" muted="" loop="" playsinline="">
+                    <source src="https://media.britannia.co.in/Copy_of_Milk_Bikis3_1_e16eeaa616.mp4" type="video/mp4"><source src="https://media.britannia.co.in/Copy_of_Milk_Bikis3_1_e16eeaa616.mp4" type="video/webp">
+                </video>
+            </div>
+        </div>
+        <h1>Ask a question</h1>
         <p>Copy the output from `gcloud auth print-access-token` and enter below, then click `Connect`. Once you see `Connected!` you can start chat with the agent!</p>
         <input id="token">
         <button id="start" onclick="con()">Connect</button>
