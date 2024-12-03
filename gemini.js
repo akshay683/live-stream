@@ -36,7 +36,7 @@ let lastResponseParagraph = null;
 
 async function connect(token) {
 	resp = await sendHttpRequest(_url + ':' +_fetch_method,'POST', {}, token)
-	const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video:true })
+	const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video:{facingMode: {exact: "environment"}} })
 	document.getElementById('localVideo').srcObject = stream
 	peerConnection = new RTCPeerConnection(resp.serverConfig);
 	stream.getTracks().forEach(track => {
